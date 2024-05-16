@@ -1,3 +1,4 @@
+import { name } from "../playwright.config.js";
 import CreateAccountPage from "./createAccountPage.js";
 import SignInPage from "./signInPage.js";
 
@@ -10,8 +11,11 @@ class HomePage {
     locators = {
         getSignInLink: () => this.page.getByRole('link', {name: 'Sign In'}),
         getCreateAccountLink: () => this.page.getByRole('link', {name: 'Create an Account'}),
-        getCartIcon: () => this.page.locator('a[class="action showcart"][href="https://magento.softwaretestingboard.com/checkout/cart/"]'),
-        getCartBanner: () => this.page.locator('#minicart-content-wrapper')
+        getCartIcon: () => this.page.locator('[class="action showcart"] span.text'),
+        getCartBanner: () => this.page.locator('#minicart-content-wrapper'),
+        getSearchField: () => this.page.locator('#search'),
+        //getWhatsNewLink: () => this.page.locator('[class="ui-menu ui-widget ui-widget-content ui-corner-all"]'),
+        getWomenLink: () => this.page.getByRole('link', {name: 'Women'})
     }
 
     async open() {

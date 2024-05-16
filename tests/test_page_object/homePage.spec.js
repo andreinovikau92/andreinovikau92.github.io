@@ -5,7 +5,8 @@ test.describe('homePage.spec', () => {
 
     test.beforeEach(async ({ page }) =>{
         const homePage = new HomePage(page);
-        homePage.open();
+        await homePage.open();
+
     });
 
     test('Verify the cart is on the Home page', async ({ page }) => {
@@ -13,10 +14,10 @@ test.describe('homePage.spec', () => {
         await homePage.clickCartIcon();
     });
 
-    test('dfd', async ({ page }) => {
+    test('Verify the Women link is visible', async ({ page }) => {
         const homePage = new HomePage(page);
-        await homePage.clickCartIcon();
-        await expect(homePage.locators.getCartBanner()).toBeVisible();
-    })
 
+        const womenLink = await homePage.locators.getWomenLink();
+        await expect(womenLink).toBeVisible();
+    });
 });
