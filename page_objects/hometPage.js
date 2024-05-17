@@ -14,7 +14,7 @@ class HomePage {
         getCartIcon: () => this.page.locator('[class="action showcart"] span.text'),
         getCartBanner: () => this.page.locator('#minicart-content-wrapper'),
         getSearchField: () => this.page.locator('#search'),
-        //getWhatsNewLink: () => this.page.locator('[class="ui-menu ui-widget ui-widget-content ui-corner-all"]'),
+        getWhatsNewLink: () => this.page.locator('#ui-id-3'),
         getWomenLink: () => this.page.getByRole('link', {name: 'Women'})
     }
 

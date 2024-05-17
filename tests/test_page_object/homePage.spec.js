@@ -14,6 +14,13 @@ test.describe('homePage.spec', () => {
         await homePage.clickCartIcon();
     });
 
+    test('Verify the Whats new link is visible', async ({ page }) => {
+        const homePage = new HomePage(page);
+
+        const whatsNewLink = await homePage.locators.getWhatsNewLink();
+        await expect(whatsNewLink).toBeVisible();
+    });
+
     test('Verify the Women link is visible', async ({ page }) => {
         const homePage = new HomePage(page);
 
