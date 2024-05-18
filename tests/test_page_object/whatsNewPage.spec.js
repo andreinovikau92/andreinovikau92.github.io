@@ -10,7 +10,7 @@ test.describe('whatsNewPage.spec.js', () => {
         await homePage.clickGetWomenLink();
     });
 
-    test('Verify the Whats New Link', async ({ page }) => {
+    test('Verify the Whats New Link is navigates to the Whats New Page', async ({ page }) => {
         const whatsNewLink = new WhatsNewPage(page);
         
         expect(whatsNewLink.pageHeader).toBeVisible();
