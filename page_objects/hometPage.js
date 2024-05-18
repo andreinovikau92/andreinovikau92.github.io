@@ -1,6 +1,7 @@
 import { name } from "../playwright.config.js";
 import CreateAccountPage from "./createAccountPage.js";
 import SignInPage from "./signInPage.js";
+import WhatsNewPage from "./whatsNewPage.js";
 
 class HomePage {
 
@@ -38,6 +39,12 @@ class HomePage {
         await this.locators.getCartIcon().click();
 
         return this;
+    }
+
+    async clickGetWomenLink() {
+        await this.locators.getWhatsNewLink().click();
+
+        return new WhatsNewPage(this.page);
     }
 
 }
