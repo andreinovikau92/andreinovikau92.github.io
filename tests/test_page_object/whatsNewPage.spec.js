@@ -15,4 +15,11 @@ test.describe('whatsNewPage.spec.js', () => {
         
         expect(whatsNewLink.pageHeader).toBeVisible();
     });
+
+    test('Verify the New in Womens subtitle is visible in the page', async ({ page }) => {
+        const whatsNewLink = new WhatsNewPage(page);
+
+        await expect(whatsNewLink.newInWomensSubtitle).toBeVisible();
+        await expect(whatsNewLink.newInWomensSubtitle).toHaveText("New in women's");
+    });
 });
