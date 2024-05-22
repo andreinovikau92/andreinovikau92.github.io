@@ -16,7 +16,8 @@ class HomePage {
         getCartBanner: () => this.page.locator('#minicart-content-wrapper'),
         getSearchField: () => this.page.locator('#search'),
         getWhatsNewLink: () => this.page.locator('#ui-id-3'),
-        getWomenLink: () => this.page.getByRole('link', {name: 'Women'})
+        getWomenLink: () => this.page.getByRole('link', {name: 'Women'}),
+        getMenLink: () => this.page.locator('#ui-id-5')
     }
 
     async open() {

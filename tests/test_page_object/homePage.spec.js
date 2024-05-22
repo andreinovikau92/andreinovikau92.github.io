@@ -27,4 +27,12 @@ test.describe('homePage.spec', () => {
         const womenLink = await homePage.locators.getWomenLink();
         await expect(womenLink).toBeVisible();
     });
+
+    test('Verify the Men link is visible', async ({ page }) => {
+        const homePage = new HomePage(page);
+
+        const menLink = await homePage.locators.getMenLink();
+        await expect(menLink).toHaveText('Men');
+        await expect(menLink).toBeVisible();
+    });
 });

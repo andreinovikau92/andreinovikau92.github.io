@@ -24,3 +24,4 @@ export const MESSAGE_WHEN_THE_USER_ENTER_VALID_PASSWORD = `If there is an accoun
 export const FIRST_NAME = 'Test';
 export const LAST_NAME = 'Test';
 export const PASSWORD = 'Test2024';
+export const NEW_IN_WOMENS_LIST = ['Hoodies & Sweatshirts', 'Jackets', 'Tees', 'Bras & Tanks', 'Pants', 'Shorts'];
