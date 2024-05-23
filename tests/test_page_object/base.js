@@ -27,7 +27,17 @@ export const test = base.extend ({
 
             await use('');
         },
-
         {scope: 'test'},
-    ]
+    ],
+
+    whatsNewPage: [
+        async ({ page }, use) => {
+            const homePage = new HomePage(page);
+            await homePage.open();
+            await homePage.clickGetWomenLink();
+
+            await use('');
+        },
+        {scope: 'test'},
+    ],
 });
