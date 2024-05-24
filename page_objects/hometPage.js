@@ -1,7 +1,7 @@
-import { name } from "../playwright.config.js";
 import CreateAccountPage from "./createAccountPage.js";
 import SignInPage from "./signInPage.js";
 import WhatsNewPage from "./whatsNewPage.js";
+import NewYogaCollectionPage from "./newYogaCollectionPage.js";
 
 class HomePage {
 
@@ -17,7 +17,8 @@ class HomePage {
         getSearchField: () => this.page.locator('#search'),
         getWhatsNewLink: () => this.page.locator('#ui-id-3'),
         getWomenLink: () => this.page.getByRole('link', {name: 'Women'}),
-        getMenLink: () => this.page.locator('#ui-id-5')
+        getMenLink: () => this.page.locator('#ui-id-5'),
+        getShopNewYogaButton: () =>this.page.locator('[class="action more button"]')
     }
 
     async open() {
@@ -48,6 +49,11 @@ class HomePage {
         return new WhatsNewPage(this.page);
     }
 
+    async clickShopNewYogaButton() {
+        await this.locators.getShopNewYogaButton().click()
+
+        return new NewYogaCollectionPage(this.page)
+    }
 }
 
 export default HomePage;

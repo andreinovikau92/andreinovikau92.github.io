@@ -1,5 +1,6 @@
 import { test, expect } from "@playwright/test";
 import HomePage from "../../page_objects/hometPage";
+import NewYogaCollectionPage from "../../page_objects/newYogaCollectionPage";
 
 test.describe('homePage.spec', () => {
 
@@ -34,5 +35,15 @@ test.describe('homePage.spec', () => {
         const menLink = await homePage.locators.getMenLink();
         await expect(menLink).toHaveText('Men');
         await expect(menLink).toBeVisible();
+    });
+
+    test('Verify after clicking the Shop New Yoga button the New Luma Yoga Collection page is opened', async ({ page }) => {
+        const homePage = new HomePage(page);
+        const newYogaCollectionPage = new NewYogaCollectionPage(page);
+
+        await homePage.clickShopNewYogaButton();
+
+        await expect(newYogaCollectionPage.pageHeader).toBeVisible();
+        await expect(newYogaCollectionPage.pageHeader).toHaveText('New Luma Yoga Collection');
     });
 });
