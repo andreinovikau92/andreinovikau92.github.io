@@ -18,7 +18,8 @@ class HomePage {
         getWhatsNewLink: () => this.page.locator('#ui-id-3'),
         getWomenLink: () => this.page.getByRole('link', {name: 'Women'}),
         getMenLink: () => this.page.locator('#ui-id-5'),
-        getShopNewYogaButton: () =>this.page.locator('[class="action more button"]')
+        getShopNewYogaButton: () => this.page.locator('[class="action more button"]'),
+        getHotSellers: () => this.page.locator('.content-heading h2.title')
     }
 
     async open() {

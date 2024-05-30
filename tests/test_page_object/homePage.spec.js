@@ -46,4 +46,11 @@ test.describe('homePage.spec', () => {
         await expect(newYogaCollectionPage.pageHeader).toBeVisible();
         await expect(newYogaCollectionPage.pageHeader).toHaveText('New Luma Yoga Collection');
     });
+
+    test('Verify the Hot Sellers section is visible', async ({ page }) => {
+        const homePage = new HomePage(page);
+
+        await expect(homePage.locators.getHotSellers()).toBeVisible();
+        await expect(homePage.locators.getHotSellers()).toHaveText('Hot Sellers');
+    });
 });
