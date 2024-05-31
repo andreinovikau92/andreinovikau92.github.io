@@ -54,7 +54,7 @@ test.describe('homePage.spec', () => {
         await expect(homePage.locators.getHotSellers()).toHaveText('Hot Sellers');
     });
 
-    test('dfdf', async ({ page }) => {
+    test('Verify after clicking Rdiant Tee the Radiant Tee page is opened', async ({ page }) => {
         const homePage = new HomePage(page);
 
         await homePage.clickRadiantTeeLink();
