@@ -53,4 +53,10 @@ test.describe('homePage.spec', () => {
         await expect(homePage.locators.getHotSellers()).toBeVisible();
         await expect(homePage.locators.getHotSellers()).toHaveText('Hot Sellers');
     });
+
+    test('dfdf', async ({ page }) => {
+        const homePage = new HomePage(page);
+
+        await homePage.clickRadiantTeeLink();
+    });
 });

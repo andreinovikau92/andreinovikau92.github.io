@@ -19,7 +19,8 @@ class HomePage {
         getWomenLink: () => this.page.getByRole('link', {name: 'Women'}),
         getMenLink: () => this.page.locator('#ui-id-5'),
         getShopNewYogaButton: () => this.page.locator('[class="action more button"]'),
-        getHotSellers: () => this.page.locator('.content-heading h2.title')
+        getHotSellers: () => this.page.locator('.content-heading h2.title'),
+        getRadiantTeeLink: () => this.page.locator('[class="product-item"]:nth-child(1)')
     }
 
     async open() {
@@ -54,6 +55,10 @@ class HomePage {
         await this.locators.getShopNewYogaButton().click()
 
         return new NewYogaCollectionPage(this.page)
+    }
+
+    async clickRadiantTeeLink() {
+        await this.locators.getRadiantTeeLink().click()
     }
 }
 
