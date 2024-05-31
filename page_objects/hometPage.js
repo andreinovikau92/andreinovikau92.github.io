@@ -2,6 +2,7 @@ import CreateAccountPage from "./createAccountPage.js";
 import SignInPage from "./signInPage.js";
 import WhatsNewPage from "./whatsNewPage.js";
 import NewYogaCollectionPage from "./newYogaCollectionPage.js";
+import RadiantTeePage from "./radiantTeePage.js";
 
 class HomePage {
 
@@ -59,6 +60,8 @@ class HomePage {
 
     async clickRadiantTeeLink() {
         await this.locators.getRadiantTeeLink().click()
+
+        return new RadiantTeePage(this.page)
     }
 }
 

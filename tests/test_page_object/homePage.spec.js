@@ -1,6 +1,7 @@
 import { test, expect } from "@playwright/test";
 import HomePage from "../../page_objects/hometPage";
 import NewYogaCollectionPage from "../../page_objects/newYogaCollectionPage";
+import RadiantTeePage from "../../page_objects/radiantTeePage";
 
 test.describe('homePage.spec', () => {
 
@@ -56,7 +57,10 @@ test.describe('homePage.spec', () => {
 
     test('Verify after clicking Rdiant Tee the Radiant Tee page is opened', async ({ page }) => {
         const homePage = new HomePage(page);
+        const radiantTeePage = new RadiantTeePage(page);
 
         await homePage.clickRadiantTeeLink();
+
+        await expect(radiantTeePage.pageHeader).toHaveText('Radiant Tee');
     });
 });
