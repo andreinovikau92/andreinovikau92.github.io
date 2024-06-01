@@ -16,4 +16,12 @@ test.describe('radiantTeePage.spec', () => {
 
         await expect(radiantTeePage.addYourReviewLink).toHaveText('Add Your Review');
     });
+
+    test('Verify after clicking Add Your Review Link navigates to the Add Yoour Review section', async ({ page }) => {
+        const radiantTeePage = new RadiantTeePage(page);
+
+        await radiantTeePage.clickYourReviewLink();
+
+        await expect(radiantTeePage.getYouAreReviewingRadiantTee).toHaveText("You're reviewing:Radiant Tee");
+    });
 });
