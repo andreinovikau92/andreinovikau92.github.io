@@ -1,6 +1,7 @@
 import { test, expect } from "@playwright/test";
 import HomePage from "../../page_objects/hometPage";
 import RadiantTeePage from "../../page_objects/radiantTeePage";
+import { ADD_YOUR_REVIEW, YOUR_ARE_REVIEWING_RADIANT_TEE } from "../../helpers/testData";
 
 test.describe('radiantTeePage.spec', () => {
 
@@ -14,7 +15,7 @@ test.describe('radiantTeePage.spec', () => {
     test('Verify Add Your Review is visible', async({ page }) => {
         const radiantTeePage = new RadiantTeePage(page);
 
-        await expect(radiantTeePage.addYourReviewLink).toHaveText('Add Your Review');
+        await expect(radiantTeePage.addYourReviewLink).toHaveText(ADD_YOUR_REVIEW);
     });
 
     test('Verify after clicking Add Your Review Link navigates to the Add Yoour Review section', async ({ page }) => {
@@ -22,7 +23,7 @@ test.describe('radiantTeePage.spec', () => {
 
         await radiantTeePage.clickYourReviewLink();
 
-        await expect(radiantTeePage.getYouAreReviewingRadiantTee).toHaveText("You're reviewing:Radiant Tee");
+        await expect(radiantTeePage.getYouAreReviewingRadiantTee).toHaveText(YOUR_ARE_REVIEWING_RADIANT_TEE);
     });
 
     test('Verify the review is added', async ({ page }) => {
@@ -30,5 +31,5 @@ test.describe('radiantTeePage.spec', () => {
 
         await radiantTeePage.clickYourReviewLink();
         await radiantTeePage.clickRatingStar();
-    })
+    });
 });

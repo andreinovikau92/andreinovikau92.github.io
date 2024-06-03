@@ -1,3 +1,5 @@
+import exp from "constants";
+
 // URL
 export const BASE_URL = 'https://magento.softwaretestingboard.com';
 export const FORGOT_YOUR_PASSWORD_PAGE_END_POINT = '/customer/account/forgotpassword/';
@@ -25,3 +27,5 @@ export const FIRST_NAME = 'Test';
 export const LAST_NAME = 'Test';
 export const PASSWORD = 'Test2024';
 export const NEW_IN_WOMENS_LIST = ['Hoodies & Sweatshirts', 'Jackets', 'Tees', 'Bras & Tanks', 'Pants', 'Shorts'];
+export const ADD_YOUR_REVIEW = 'Add Your Review';
+export const YOUR_ARE_REVIEWING_RADIANT_TEE = "You're reviewing:Radiant Tee";
