@@ -24,4 +24,11 @@ test.describe('radiantTeePage.spec', () => {
 
         await expect(radiantTeePage.getYouAreReviewingRadiantTee).toHaveText("You're reviewing:Radiant Tee");
     });
+
+    test('Verify the review is added', async ({ page }) => {
+        const radiantTeePage = new RadiantTeePage(page);
+
+        await radiantTeePage.clickYourReviewLink();
+        await radiantTeePage.clickRatingStar();
+    })
 });
