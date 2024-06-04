@@ -1,3 +1,4 @@
+import { FILL_NICKNAME_FIELD, FILL_REVIEW_FIELD, FILL_SUMMARY_FIELD } from "../helpers/testData";
 
 
 class RadiantTeePage {
@@ -11,7 +12,7 @@ class RadiantTeePage {
         this.getSummaryField = page.locator('#summary_field');
         this.getReviewField = page.locator('#review_field');
         this.getSubmitReviewButton = page.locator('[class="action submit primary"]');
-
+        this.getAlertMessage = page.getByRole('alert').first();
     }
 
     async clickYourReviewLink() {
@@ -27,19 +28,19 @@ class RadiantTeePage {
     }
 
     async fillNickNameField() {
-        await this.getNickNameField.fill('Test');
+        await this.getNickNameField.fill(FILL_NICKNAME_FIELD);
 
         return this;
     }
 
     async fillSummaryField() {
-        await this.getSummaryField.fill('Test');
+        await this.getSummaryField.fill(FILL_SUMMARY_FIELD);
 
         return this;
     }
 
     async fillReviewField() {
-        await this.getReviewField.fill('Test');
+        await this.getReviewField.fill(FILL_REVIEW_FIELD);
 
         return this;
     }

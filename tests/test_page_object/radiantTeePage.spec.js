@@ -1,7 +1,7 @@
 import { test, expect } from "@playwright/test";
 import HomePage from "../../page_objects/hometPage";
 import RadiantTeePage from "../../page_objects/radiantTeePage";
-import { ADD_YOUR_REVIEW, YOUR_ARE_REVIEWING_RADIANT_TEE } from "../../helpers/testData";
+import { ADD_YOUR_REVIEW, ALERT_MESSAGE_FROM_RADIANT_TEE_PAGE, YOUR_ARE_REVIEWING_RADIANT_TEE } from "../../helpers/testData";
 
 test.describe('radiantTeePage.spec', () => {
 
@@ -35,5 +35,8 @@ test.describe('radiantTeePage.spec', () => {
         await radiantTeePage.fillSummaryField();
         await radiantTeePage.fillReviewField();
         await radiantTeePage.clickSubmitReviewButton();
+
+        await expect(radiantTeePage.getAlertMessage).toBeVisible();
+        await expect(radiantTeePage.getAlertMessage).toHaveText(ALERT_MESSAGE_FROM_RADIANT_TEE_PAGE);
     });
 });

@@ -29,3 +29,7 @@ export const PASSWORD = 'Test2024';
 export const NEW_IN_WOMENS_LIST = ['Hoodies & Sweatshirts', 'Jackets', 'Tees', 'Bras & Tanks', 'Pants', 'Shorts'];
 export const ADD_YOUR_REVIEW = 'Add Your Review';
 export const YOUR_ARE_REVIEWING_RADIANT_TEE = "You're reviewing:Radiant Tee";
+export const FILL_NICKNAME_FIELD = 'Test';
+export const FILL_SUMMARY_FIELD = 'Test';
+export const FILL_REVIEW_FIELD = 'Test';
+export const ALERT_MESSAGE_FROM_RADIANT_TEE_PAGE = 'You submitted your review for moderation.'; 
