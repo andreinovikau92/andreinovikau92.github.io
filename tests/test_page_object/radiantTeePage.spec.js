@@ -31,5 +31,9 @@ test.describe('radiantTeePage.spec', () => {
 
         await radiantTeePage.clickYourReviewLink();
         await radiantTeePage.clickRatingStar();
+        await radiantTeePage.fillNickNameField();
+        await radiantTeePage.fillSummaryField();
+        await radiantTeePage.fillReviewField();
+        await radiantTeePage.clickSubmitReviewButton();
     });
 });

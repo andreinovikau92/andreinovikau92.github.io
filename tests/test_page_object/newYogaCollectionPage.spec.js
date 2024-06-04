@@ -1,5 +1,5 @@
 import {test, expect} from "@playwright/test";
-import HomePage from "../page_objects/hometPage";
+import HomePage from "../../page_objects/hometPage";
 
 
 test.describe('newYogaCollectionPage.spec', () => {
