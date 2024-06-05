@@ -39,4 +39,12 @@ test.describe('radiantTeePage.spec', () => {
         await expect(radiantTeePage.getAlertMessage).toBeVisible();
         await expect(radiantTeePage.getAlertMessage).toHaveText(ALERT_MESSAGE_FROM_RADIANT_TEE_PAGE);
     });
+
+    test('Veify after selecting blue color the blue color is shown', async ({ page }) => {
+        const radiantTeePage = new RadiantTeePage(page);
+
+        await radiantTeePage.clickBlueColor();
+
+        await expect(radiantTeePage.getColorName).toHaveText('Blue');
+    });
 });

@@ -13,6 +13,8 @@ class RadiantTeePage {
         this.getReviewField = page.locator('#review_field');
         this.getSubmitReviewButton = page.locator('[class="action submit primary"]');
         this.getAlertMessage = page.getByRole('alert').first();
+        this.getBlueColor = page.locator('#option-label-color-93-item-50');
+        this.getColorName = page.locator('.swatch-attribute.color .swatch-attribute-selected-option');
     }
 
     async clickYourReviewLink() {
@@ -47,6 +49,12 @@ class RadiantTeePage {
 
     async clickSubmitReviewButton() {
         await this.getSubmitReviewButton.click();
+
+        return this;
+    }
+
+    async clickBlueColor() {
+        await this.getBlueColor.click();
 
         return this;
     }
