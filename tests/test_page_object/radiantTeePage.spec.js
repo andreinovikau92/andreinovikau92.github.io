@@ -50,4 +50,12 @@ test.describe('radiantTeePage.spec', () => {
 
         await expect(radiantTeePage.getColorName).toHaveText(BLUE_COLOR);
     });
+
+    test('Veify after selecting blue color the blue photo is shown', async ({ page }) => {
+        const radiantTeePage = new RadiantTeePage(page);
+
+        await radiantTeePage.clickBlueColor();
+
+        await expect(radiantTeePage.getBluePhoto).toBeVisible();
+    });
 });
