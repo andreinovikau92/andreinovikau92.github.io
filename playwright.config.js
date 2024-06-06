@@ -32,7 +32,7 @@ module.exports = defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
-    
+    reporter: ["allure-playwright", {outputFolder: 'my-allure-results'}],
   },
 
   /* Configure projects for major browsers */
