@@ -35,3 +35,4 @@ export const FILL_REVIEW_FIELD = 'Test';
 export const ALERT_MESSAGE_FROM_RADIANT_TEE_PAGE = 'You submitted your review for moderation.'; 
 export const BLUE_COLOR = 'Blue';
 export const IN_STOCK_LABEL = 'In stock';
+export const SKU_RADIANT_TEE_PAGE = 'SKU WS12';

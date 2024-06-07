@@ -5,6 +5,7 @@ import { ADD_YOUR_REVIEW,
     ALERT_MESSAGE_FROM_RADIANT_TEE_PAGE, 
     BLUE_COLOR, 
     IN_STOCK_LABEL, 
+    SKU_RADIANT_TEE_PAGE, 
     YOUR_ARE_REVIEWING_RADIANT_TEE } from "../../helpers/testData";
 
 test.describe('radiantTeePage.spec', () => {
@@ -64,5 +65,11 @@ test.describe('radiantTeePage.spec', () => {
         const radiantTeePage = new RadiantTeePage(page);
 
         await expect(radiantTeePage.getInStockLabel).toHaveText(IN_STOCK_LABEL);
+    });
+
+    test('Verify the Radiant Tee page has SKU', async ({ page }) => {
+        const radiantTeePage = new RadiantTeePage(page);
+
+        await expect(radiantTeePage.getSku).toHaveText(SKU_RADIANT_TEE_PAGE);
     });
 });
