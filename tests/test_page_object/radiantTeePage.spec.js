@@ -4,6 +4,7 @@ import RadiantTeePage from "../../page_objects/radiantTeePage";
 import { ADD_YOUR_REVIEW, 
     ALERT_MESSAGE_FROM_RADIANT_TEE_PAGE, 
     BLUE_COLOR, 
+    IN_STOCK_LABEL, 
     YOUR_ARE_REVIEWING_RADIANT_TEE } from "../../helpers/testData";
 
 test.describe('radiantTeePage.spec', () => {
@@ -57,5 +58,11 @@ test.describe('radiantTeePage.spec', () => {
         await radiantTeePage.clickBlueColor();
 
         await expect(radiantTeePage.getBluePhoto).toBeVisible();
+    });
+
+    test('Verify the Radian Tee page has In Stock label', async ({ page }) => {
+        const radiantTeePage = new RadiantTeePage(page);
+
+        await expect(radiantTeePage.getInStockLabel).toHaveText(IN_STOCK_LABEL);
     });
 });

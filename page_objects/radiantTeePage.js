@@ -16,6 +16,7 @@ class RadiantTeePage {
         this.getBlueColor = page.locator('#option-label-color-93-item-50');
         this.getColorName = page.locator('.swatch-attribute.color .swatch-attribute-selected-option');
         this.getBluePhoto = page.locator('[href^="https://magento.softwaretestingboard.com/pub/media/catalog/product/cache/d34482110da20c5e24f97c38fb219fb3/w/s/ws12-blue_main_1.jpg"]');
+        this.getInStockLabel = page.locator('.stock.available span');
     }
 
     async clickYourReviewLink() {
