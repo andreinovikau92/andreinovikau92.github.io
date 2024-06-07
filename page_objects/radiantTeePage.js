@@ -18,6 +18,8 @@ class RadiantTeePage {
         this.getBluePhoto = page.locator('[href^="https://magento.softwaretestingboard.com/pub/media/catalog/product/cache/d34482110da20c5e24f97c38fb219fb3/w/s/ws12-blue_main_1.jpg"]');
         this.getInStockLabel = page.locator('.stock.available span');
         this.getSku = page.locator('.product.attribute.sku');
+        this.getReviews = page.locator('#tab-label-reviews');
+        this.getCustomerReviewsHeader = page.locator('#customer-reviews .block-title');
     }
 
     async clickYourReviewLink() {
@@ -60,6 +62,10 @@ class RadiantTeePage {
         await this.getBlueColor.click();
 
         return this;
+    }
+
+    async clickReviews() {
+        await this.getReviews.click();
     }
 }
 

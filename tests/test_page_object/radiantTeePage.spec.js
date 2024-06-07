@@ -72,4 +72,12 @@ test.describe('radiantTeePage.spec', () => {
 
         await expect(radiantTeePage.getSku).toHaveText(SKU_RADIANT_TEE_PAGE);
     });
+
+    test('Verify after clicking Reviews option Customer Reviews are displayed', async ({ page }) => {
+        const radiantTeePage = new RadiantTeePage(page);
+
+        await radiantTeePage.clickReviews();
+
+        await expect(radiantTeePage.getCustomerReviewsHeader).toBeVisible();
+    });
 });
