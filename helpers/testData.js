@@ -36,3 +36,4 @@ export const ALERT_MESSAGE_FROM_RADIANT_TEE_PAGE = 'You submitted your review fo
 export const BLUE_COLOR = 'Blue';
 export const IN_STOCK_LABEL = 'In stock';
 export const SKU_RADIANT_TEE_PAGE = 'SKU WS12';
+export const CUSTOMER_REVIEWS_HEADER = 'Customer Reviews';

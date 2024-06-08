@@ -4,6 +4,7 @@ import RadiantTeePage from "../../page_objects/radiantTeePage";
 import { ADD_YOUR_REVIEW, 
     ALERT_MESSAGE_FROM_RADIANT_TEE_PAGE, 
     BLUE_COLOR, 
+    CUSTOMER_REVIEWS_HEADER, 
     IN_STOCK_LABEL, 
     SKU_RADIANT_TEE_PAGE, 
     YOUR_ARE_REVIEWING_RADIANT_TEE } from "../../helpers/testData";
@@ -79,5 +80,6 @@ test.describe('radiantTeePage.spec', () => {
         await radiantTeePage.clickReviews();
 
         await expect(radiantTeePage.getCustomerReviewsHeader).toBeVisible();
+        await expect(radiantTeePage.getCustomerReviewsHeader).toHaveText(CUSTOMER_REVIEWS_HEADER);
     });
 });
