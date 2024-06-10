@@ -82,4 +82,12 @@ test.describe('radiantTeePage.spec', () => {
         await expect(radiantTeePage.getCustomerReviewsHeader).toBeVisible();
         await expect(radiantTeePage.getCustomerReviewsHeader).toHaveText(CUSTOMER_REVIEWS_HEADER);
     });
+
+    test('Verify the More Information section is visible', async ({ page }) => {
+        const radiantTeePage = new RadiantTeePage(page);
+
+        await radiantTeePage.clicMoreInformationSection();
+
+        await expect(radiantTeePage.getMoreInformationSectionContent).toBeVisible();
+    });
 });
