@@ -20,6 +20,7 @@ class RadiantTeePage {
         this.getSku = page.locator('.product.attribute.sku');
         this.getReviews = page.locator('#tab-label-reviews');
         this.getCustomerReviewsHeader = page.locator('#customer-reviews .block-title');
+        this.getMoreInformationSection = page.locator('#tab-label-additional');
     }
 
     async clickYourReviewLink() {
