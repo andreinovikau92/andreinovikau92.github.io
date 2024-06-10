@@ -68,6 +68,10 @@ class RadiantTeePage {
     async clickReviews() {
         await this.getReviews.click();
     }
+
+    async clicMoreInformationSection() {
+        await this.getMoreInformationSection.click();
+    }
 }
 
 export default RadiantTeePage;
