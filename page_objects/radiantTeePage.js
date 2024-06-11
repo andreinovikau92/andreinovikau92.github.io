@@ -22,6 +22,7 @@ class RadiantTeePage {
         this.getCustomerReviewsHeader = page.locator('#customer-reviews .block-title');
         this.getMoreInformationSection = page.locator('#tab-label-additional');
         this.getMoreInformationSectionContent = page.locator('#additional [class="additional-attributes-wrapper table-wrapper"]');
+        this.getDetailsSection = page.locator('#description .product.attribute.description');
     }
 
     async clickYourReviewLink() {

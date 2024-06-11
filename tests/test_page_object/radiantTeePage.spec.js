@@ -90,4 +90,10 @@ test.describe('radiantTeePage.spec', () => {
 
         await expect(radiantTeePage.getMoreInformationSectionContent).toBeVisible();
     });
+
+    test('Verify the Details section is visible', async ({ page }) => {
+        const radiantTeePage = new RadiantTeePage(page);
+
+        await expect(radiantTeePage.getDetailsSection).toBeVisible();
+    });
 });
