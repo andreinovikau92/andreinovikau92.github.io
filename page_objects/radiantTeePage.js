@@ -75,6 +75,10 @@ class RadiantTeePage {
     async clicMoreInformationSection() {
         await this.getMoreInformationSection.click();
     }
+
+    async clickAddToCompare() {
+        await this.getAddToCompare.click();
+    }
 }
 
 export default RadiantTeePage;
