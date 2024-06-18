@@ -21,7 +21,8 @@ class HomePage {
         getMenLink: () => this.page.locator('#ui-id-5'),
         getShopNewYogaButton: () => this.page.locator('[class="action more button"]'),
         getHotSellers: () => this.page.locator('.content-heading h2.title'),
-        getRadiantTeeLink: () => this.page.locator('[class="product-item"]:nth-child(1)')
+        getRadiantTeeLink: () => this.page.locator('[class="product-item"]:nth-child(1)'),
+        getWelcomeUser: () => this.page.locator('span.logged-in').first(),
     }
 
     async open() {

@@ -96,4 +96,12 @@ test.describe('radiantTeePage.spec', () => {
 
         await expect(radiantTeePage.getDetailsSection).toBeVisible();
     });
+
+    test('Verify the product is added to the comparison list', async ({ page }) => {
+        const radiantTeePage = new RadiantTeePage(page);
+
+        await radiantTeePage.clickAddToCompare();
+
+        await expect(radiantTeePage.getComparisonListAlert).toHaveText('You added product Radiant Tee to the comparison list.');
+    });
 });

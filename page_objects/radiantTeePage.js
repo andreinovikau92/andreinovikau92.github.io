@@ -24,6 +24,7 @@ class RadiantTeePage {
         this.getMoreInformationSectionContent = page.locator('#additional [class="additional-attributes-wrapper table-wrapper"]');
         this.getDetailsSection = page.locator('#description .product.attribute.description');
         this.getAddToCompare = page.locator('.action.tocompare');
+        this.getComparisonListAlert = page.locator('.page.messages');
     }
 
     async clickYourReviewLink() {
@@ -78,6 +79,8 @@ class RadiantTeePage {
 
     async clickAddToCompare() {
         await this.getAddToCompare.click();
+
+        return this;
     }
 }
 
