@@ -104,4 +104,10 @@ test.describe('radiantTeePage.spec', () => {
 
         await expect(radiantTeePage.getComparisonListAlert).toHaveText('You added product Radiant Tee to the comparison list.');
     });
+
+    test('Verify the product is not added to cart when the size and color are not selected', async({ page }) => {
+        const radiantTeePage = new RadiantTeePage(page);
+
+        await radiantTeePage.clickAddToCartButton();
+    });
 });
