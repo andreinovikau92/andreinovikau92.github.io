@@ -109,5 +109,8 @@ test.describe('radiantTeePage.spec', () => {
         const radiantTeePage = new RadiantTeePage(page);
 
         await radiantTeePage.clickAddToCartButton();
+
+        await expect(radiantTeePage.getErrorMessageSizeIsNotSelected).toBeVisible();
+        await expect(radiantTeePage.getErrorMessageColorIsNotSelected).toBeVisible()
     });
 });

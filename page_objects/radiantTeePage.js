@@ -26,6 +26,8 @@ class RadiantTeePage {
         this.getAddToCompare = page.locator('.action.tocompare');
         this.getComparisonListAlert = page.locator('.page.messages');
         this.getAddToCartButton = page.locator('#product-addtocart-button');
+        this.getErrorMessageSizeIsNotSelected = page.locator('[id="super_attribute[143]-error"]');
+        this.getErrorMessageColorIsNotSelected = page.locator('[id="super_attribute[93]-error"]');
     }
 
     async clickYourReviewLink() {
