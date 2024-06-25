@@ -113,4 +113,16 @@ test.describe('radiantTeePage.spec', () => {
         await expect(radiantTeePage.getErrorMessageSizeIsNotSelected).toBeVisible();
         await expect(radiantTeePage.getErrorMessageColorIsNotSelected).toBeVisible()
     });
+
+    test('Verify the product is not added to the cart when the QTY is 0', async({ page}) => {
+        const radiantTeePage = new RadiantTeePage(page);
+
+        await radiantTeePage.clickXSsize();
+        await radiantTeePage.clickBlueColor();
+        await radiantTeePage.clearQTY();
+        await radiantTeePage.fillQTY();
+        await radiantTeePage.clickAddToCartButton();
+
+        await expect(radiantTeePage.getQtyErrorMessage).toBeVisible();
+    })
 });

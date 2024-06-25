@@ -28,7 +28,9 @@ class RadiantTeePage {
         this.getAddToCartButton = page.locator('#product-addtocart-button');
         this.getErrorMessageSizeIsNotSelected = page.locator('[id="super_attribute[143]-error"]');
         this.getErrorMessageColorIsNotSelected = page.locator('[id="super_attribute[93]-error"]');
+        this.getXSSize = page.locator('#option-label-size-143-item-166');
         this.getQTY = page.locator('#qty');
+        this.getQtyErrorMessage = page.locator('#qty-error');
     }
 
     async clickYourReviewLink() {
@@ -89,6 +91,24 @@ class RadiantTeePage {
 
     async clickAddToCartButton() {
         await this.getAddToCartButton.click();
+
+        return this;
+    }
+
+    async clearQTY() {
+        await this.getQTY.clear();
+
+        return this;
+    }
+
+    async fillQTY() {
+        await this.getQTY.fill('0');
+
+        return this;
+    }
+
+    async clickXSsize() {
+        await this.getXSSize.click();
 
         return this;
     }
