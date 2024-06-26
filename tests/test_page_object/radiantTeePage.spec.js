@@ -6,6 +6,7 @@ import { ADD_YOUR_REVIEW,
     BLUE_COLOR, 
     CUSTOMER_REVIEWS_HEADER, 
     IN_STOCK_LABEL, 
+    QTY_EMPTY_FIELD_ERROR_MESSAGE, 
     QTY_GREATER_THEN_0_ERROR_MESSAGE, 
     SKU_RADIANT_TEE_PAGE, 
     YOUR_ARE_REVIEWING_RADIANT_TEE } from "../../helpers/testData";
@@ -126,5 +127,17 @@ test.describe('radiantTeePage.spec', () => {
 
         await expect(radiantTeePage.getQtyErrorMessage).toBeVisible();
         await expect(radiantTeePage.getQtyErrorMessage).toHaveText(QTY_GREATER_THEN_0_ERROR_MESSAGE);
-    })
+    });
+
+    test('Verify the poduct is not added to the cart when the QTY input is empty', async({ page }) => {
+        const radiantTeePage = new RadiantTeePage(page);
+
+        await radiantTeePage.clickXSsize();
+        await radiantTeePage.clickBlueColor();
+        await radiantTeePage.clearQTY();
+        await radiantTeePage.clickAddToCartButton();
+
+        await expect(radiantTeePage.getQtyErrorMessage).toBeVisible();
+        await expect(radiantTeePage.getQtyErrorMessage).toHaveText(QTY_EMPTY_FIELD_ERROR_MESSAGE);
+    });
 });
