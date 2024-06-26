@@ -36,3 +36,4 @@ export const BLUE_COLOR = 'Blue';
 export const IN_STOCK_LABEL = 'In stock';
 export const SKU_RADIANT_TEE_PAGE = 'SKU WS12';
 export const CUSTOMER_REVIEWS_HEADER = 'Customer Reviews';
+export const QTY_GREATER_THEN_0_ERROR_MESSAGE = 'Please enter a quantity greater than 0.';
