@@ -6,6 +6,7 @@ import { ADD_YOUR_REVIEW,
     BLUE_COLOR, 
     CUSTOMER_REVIEWS_HEADER, 
     IN_STOCK_LABEL, 
+    PRODUCT_IN_THE_CART_ALERT, 
     QTY_EMPTY_FIELD_ERROR_MESSAGE, 
     QTY_GREATER_THEN_0_ERROR_MESSAGE, 
     SKU_RADIANT_TEE_PAGE, 
@@ -149,5 +150,6 @@ test.describe('radiantTeePage.spec', () => {
         await radiantTeePage.clickAddToCartButton();
 
         await expect(radiantTeePage.getYouAddedRadiantTeeToYourShoppingCartMessage).toBeVisible();
+        await expect(radiantTeePage.getYouAddedRadiantTeeToYourShoppingCartMessage).toHaveText(PRODUCT_IN_THE_CART_ALERT);
     })
 });
