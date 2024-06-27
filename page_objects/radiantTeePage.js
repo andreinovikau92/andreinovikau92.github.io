@@ -31,6 +31,7 @@ class RadiantTeePage {
         this.getXSSize = page.locator('#option-label-size-143-item-166');
         this.getQTY = page.locator('#qty');
         this.getQtyErrorMessage = page.locator('#qty-error');
+        this.getYouAddedRadiantTeeToYourShoppingCartMessage = page.locator('.page.messages');
     }
 
     async clickYourReviewLink() {

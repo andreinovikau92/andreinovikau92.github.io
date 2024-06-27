@@ -140,4 +140,14 @@ test.describe('radiantTeePage.spec', () => {
         await expect(radiantTeePage.getQtyErrorMessage).toBeVisible();
         await expect(radiantTeePage.getQtyErrorMessage).toHaveText(QTY_EMPTY_FIELD_ERROR_MESSAGE);
     });
+
+    test('Verify the product is added to the cart', async({ page }) => {
+        const radiantTeePage = new RadiantTeePage(page);
+
+        await radiantTeePage.clickXSsize();
+        await radiantTeePage.clickBlueColor();
+        await radiantTeePage.clickAddToCartButton();
+
+        await expect(radiantTeePage.getYouAddedRadiantTeeToYourShoppingCartMessage).toBeVisible();
+    })
 });
