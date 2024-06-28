@@ -167,4 +167,14 @@ test.describe('radiantTeePage.spec', () => {
         await expect(shoppingCartPage.getShopingCartHeader).toBeVisible();
         await expect(shoppingCartPage.getShopingCartHeader).toHaveText(SHOPPING_CART_HEADER);
     });
+
+    test('Verify after adding the product in the cart the cart counter is changed', async({ page }) => {
+        const radiantTeePage = new RadiantTeePage(page);
+
+        await radiantTeePage.clickXSsize();
+        await radiantTeePage.clickBlueColor();
+        await radiantTeePage.clickAddToCartButton();
+
+        await expect(radiantTeePage.getCartCounterNumber).toBeVisible();
+    });
 });

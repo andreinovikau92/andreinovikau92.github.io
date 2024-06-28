@@ -34,6 +34,7 @@ class RadiantTeePage {
         this.getQtyErrorMessage = page.locator('#qty-error');
         this.getYouAddedRadiantTeeToYourShoppingCartMessage = page.locator('.page.messages');
         this.getShopingCartLink = page.locator('.page.messages a');
+        this.getCartCounterNumber = page.locator('.counter-number ');
     }
 
     async clickYourReviewLink() {
