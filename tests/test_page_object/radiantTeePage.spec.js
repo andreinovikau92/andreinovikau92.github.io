@@ -9,8 +9,10 @@ import { ADD_YOUR_REVIEW,
     PRODUCT_IN_THE_CART_ALERT, 
     QTY_EMPTY_FIELD_ERROR_MESSAGE, 
     QTY_GREATER_THEN_0_ERROR_MESSAGE, 
+    SHOPPING_CART_HEADER, 
     SKU_RADIANT_TEE_PAGE, 
     YOUR_ARE_REVIEWING_RADIANT_TEE } from "../../helpers/testData";
+import ShopingCart from "../../page_objects/shopingCart";
 
 test.describe('radiantTeePage.spec', () => {
 
@@ -152,4 +154,17 @@ test.describe('radiantTeePage.spec', () => {
         await expect(radiantTeePage.getYouAddedRadiantTeeToYourShoppingCartMessage).toBeVisible();
         await expect(radiantTeePage.getYouAddedRadiantTeeToYourShoppingCartMessage).toHaveText(PRODUCT_IN_THE_CART_ALERT);
     })
+
+    test('Verify after clicking shopping cart link on the aletr Shopping Cart page is opened', async({ page }) => {
+        const radiantTeePage = new RadiantTeePage(page);
+        const shoppingCartPage = new ShopingCart(page);
+
+        await radiantTeePage.clickXSsize();
+        await radiantTeePage.clickBlueColor();
+        await radiantTeePage.clickAddToCartButton();
+        await radiantTeePage.clickShopingCartLink();
+
+        await expect(shoppingCartPage.getShopingCartHeader).toBeVisible();
+        await expect(shoppingCartPage.getShopingCartHeader).toHaveText(SHOPPING_CART_HEADER);
+    });
 });

@@ -1,4 +1,5 @@
 import { FILL_NICKNAME_FIELD, FILL_REVIEW_FIELD, FILL_SUMMARY_FIELD } from "../helpers/testData";
+import ShopingCart from "./shopingCart";
 
 
 class RadiantTeePage {
@@ -118,6 +119,7 @@ class RadiantTeePage {
     async clickShopingCartLink() {
         await this.getShopingCartLink.click();
 
+        return ShopingCart;
     }
 }
 
