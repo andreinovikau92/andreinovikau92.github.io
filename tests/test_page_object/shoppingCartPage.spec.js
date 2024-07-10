@@ -1,6 +1,7 @@
 import { expect } from "@playwright/test";
 import { test} from './base.js';
 import ShoppingCart from "../../page_objects/shopingCart";
+import { EMPTY_SHOPPING_CART_MESSAGE } from "../../helpers/testData.js";
 
 test.describe('shoppingCartPage.spec.js', () => {
 
@@ -16,6 +17,6 @@ test.describe('shoppingCartPage.spec.js', () => {
         await shoppingCart.deleteProduct();
 
         await expect(shoppingCart.getShoppingCartEmpty).toBeVisible();
-        await expect(shoppingCart.getShoppingCartEmpty).toHaveText('You have no items in your shopping cart. Click here to continue shopping.');
+        await expect(shoppingCart.getShoppingCartEmpty).toHaveText(EMPTY_SHOPPING_CART_MESSAGE);
     });
 });
