@@ -44,7 +44,7 @@ export const test = base.extend ({
     ],
 
     shopingCart: [
-        async ({ page}, use )=> {
+        async ({ page }, use )=> {
             const homePage = new HomePage(page);
             const radiantTeePage = new RadiantTeePage(page);
             
