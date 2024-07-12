@@ -43,7 +43,7 @@ export const test = base.extend ({
         {scope: 'test'},
     ],
 
-    shopingCart: [
+    shoppingCartPage: [
         async ({ page }, use )=> {
             const homePage = new HomePage(page);
             const radiantTeePage = new RadiantTeePage(page);
