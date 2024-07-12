@@ -41,3 +41,4 @@ export const QTY_EMPTY_FIELD_ERROR_MESSAGE = 'Please enter a valid number in thi
 export const PRODUCT_IN_THE_CART_ALERT = 'You added Radiant Tee to your shopping cart.';
 export const SHOPPING_CART_HEADER = 'Shopping Cart';
 export const EMPTY_SHOPPING_CART_MESSAGE = 'You have no items in your shopping cart. Click here to continue shopping.';
+export const PRODUCT_ADDED_IN_COMPARISON_LIST_MESSAGE = 'You added product Radiant Tee to the comparison list.';

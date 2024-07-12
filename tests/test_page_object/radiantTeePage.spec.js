@@ -6,6 +6,7 @@ import { ADD_YOUR_REVIEW,
     BLUE_COLOR, 
     CUSTOMER_REVIEWS_HEADER, 
     IN_STOCK_LABEL, 
+    PRODUCT_ADDED_IN_COMPARISON_LIST_MESSAGE, 
     PRODUCT_IN_THE_CART_ALERT, 
     QTY_EMPTY_FIELD_ERROR_MESSAGE, 
     QTY_GREATER_THEN_0_ERROR_MESSAGE, 
@@ -107,7 +108,7 @@ test.describe('radiantTeePage.spec', () => {
 
         await radiantTeePage.clickAddToCompare();
 
-        await expect(radiantTeePage.getComparisonListAlert).toHaveText('You added product Radiant Tee to the comparison list.');
+        await expect(radiantTeePage.getComparisonListAlert).toHaveText(PRODUCT_ADDED_IN_COMPARISON_LIST_MESSAGE);
     });
 
     test('Verify the product is not added to cart when the size and color are not selected', async({ page }) => {
