@@ -10,6 +10,7 @@ class ShoppingCart {
         this.getQTY = page.getByLabel('QTY');
         this.getUpdateShoppingCartButton = page.getByTitle('Update Shopping Cart');
         this.getDuplicatedPrice = page.locator('.col.subtotal span.price-excluding-tax');
+        this.getSummarySection = page.locator('.cart-summary');
     }
 
     async deleteProduct() {

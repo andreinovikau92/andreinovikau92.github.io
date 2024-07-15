@@ -28,4 +28,8 @@ test.describe('shoppingCartPage.spec.js', () => {
 
         await expect(shoppingCart.getDuplicatedPrice).toHaveText('$44.00');
     });
+
+    test('Vdrify the Summary section is visible', async({ page }) => {
+        
+    });
 });
