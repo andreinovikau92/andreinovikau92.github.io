@@ -29,7 +29,9 @@ test.describe('shoppingCartPage.spec.js', () => {
         await expect(shoppingCart.getDuplicatedPrice).toHaveText('$44.00');
     });
 
-    test('Vdrify the Summary section is visible', async({ page }) => {
-        
+    test('Vdrify the Summary section is visible', async({ page, shoppingCartPage }) => {
+        const shoppingCart = new ShoppingCart(page);
+
+        await expect(shoppingCart.getSummarySection).toBeVisible();
     });
 });
