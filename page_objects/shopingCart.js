@@ -11,6 +11,8 @@ class ShoppingCart {
         this.getUpdateShoppingCartButton = page.getByTitle('Update Shopping Cart');
         this.getDuplicatedPrice = page.locator('.col.subtotal span.price-excluding-tax');
         this.getSummarySection = page.locator('.cart-summary');
+        this.getEstimateShippingAndTax = page.locator('#block-shipping-heading');
+        this.getCountryDropdown = page.getByLabel('Country');
     }
 
     async deleteProduct() {
@@ -27,6 +29,12 @@ class ShoppingCart {
 
     async clickUpdateShoppingCartButton() {
         await this.getUpdateShoppingCartButton.click();
+
+        return this;
+    }
+
+    async clicEstimateShippingAndTax() {
+        await this.getEstimateShippingAndTax.click();
 
         return this;
     }

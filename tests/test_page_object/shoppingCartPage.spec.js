@@ -29,9 +29,16 @@ test.describe('shoppingCartPage.spec.js', () => {
         await expect(shoppingCart.getDuplicatedPrice).toHaveText('$44.00');
     });
 
-    test('Vdrify the Summary section is visible', async({ page, shoppingCartPage }) => {
+    test('Verify the Summary section is visible', async({ page, shoppingCartPage }) => {
         const shoppingCart = new ShoppingCart(page);
 
         await expect(shoppingCart.getSummarySection).toBeVisible();
+    });
+    test('Verify the Summary section has below Country, State/Province, Zip/Postal Code fields and below Flat Rate, Best Way checkboxes', async({ page, shoppingCartPage}) => {
+        const shopingCart = new ShoppingCart(page);
+
+        await shopingCart.clicEstimateShippingAndTax();
+
+        await expect(shopingCart.getCountryDropdown).toBeVisible();
     });
 });
