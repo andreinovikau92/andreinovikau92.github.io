@@ -34,11 +34,13 @@ test.describe('shoppingCartPage.spec.js', () => {
 
         await expect(shoppingCart.getSummarySection).toBeVisible();
     });
+    
     test('Verify the Summary section has below Country, State/Province, Zip/Postal Code fields and below Flat Rate, Best Way checkboxes', async({ page, shoppingCartPage}) => {
         const shopingCart = new ShoppingCart(page);
 
         await shopingCart.clicEstimateShippingAndTax();
 
         await expect(shopingCart.getCountryDropdown).toBeVisible();
+        await expect(shopingCart.getStateProvinceDropdown).toBeVisible();
     });
 });

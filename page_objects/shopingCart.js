@@ -13,6 +13,7 @@ class ShoppingCart {
         this.getSummarySection = page.locator('.cart-summary');
         this.getEstimateShippingAndTax = page.locator('#block-shipping-heading');
         this.getCountryDropdown = page.getByLabel('Country');
+        this.getStateProvinceDropdown = page.getByText('State/Province').first();
     }
 
     async deleteProduct() {
