@@ -15,6 +15,7 @@ class ShoppingCart {
         this.getCountryDropdown = page.getByLabel('Country');
         this.getStateProvinceDropdown = page.getByText('State/Province').first();
         this.getZipPostalCodeField = page.getByText('Zip/Postal Code');
+        this.getFlatRateCheckbox = page.locator('#s_method_flatrate_flatrate');
     }
 
     async deleteProduct() {
