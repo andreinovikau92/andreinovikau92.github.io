@@ -43,5 +43,6 @@ test.describe('shoppingCartPage.spec.js', () => {
         await expect(shopingCart.getCountryDropdown).toBeVisible();
         await expect(shopingCart.getStateProvinceDropdown).toBeVisible();
         await expect(shopingCart.getZipPostalCodeField).toBeVisible();
+        await expect(shopingCart.getFlatRateCheckbox).toBeVisible();
     });
 });
